@@ -1,404 +1,191 @@
-<html lang="en">
+<!DOCTYPE html> <!-- # Deklarace typu dokumentu -->
+<html lang="en"> <!-- # Jazyk stránky nastaven na angličtinu -->
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>clothing-test-shop</title>
+    <meta charset="UTF-8"> <!-- # Kódování znaků UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- # Kompatibilita s IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- # Responzivní zobrazení na mobilu -->
+    <title>clothing-test-shop</title> <!-- # Titulek stránky -->
+
     <style>
-        body{
-            font-family: sans-serif;
-        }
-        nav{
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: lightgray;
-        }
-        .navbar{
-            grid-area: navbar;
-        }
-        .logo-nav{
-            width: 50px;
-            margin: 0;
-            margin-left: 30px;
-        }
-        nav ul li{
-            list-style: none;
-            display: inline-block;
-            margin-right: 30px;
-        }
-        nav ul li a{
-            text-decoration: none;
-            color: #000;
-            font-size: 14px;
-        }
-        nav ul li a:hover{
-            color: #ff5ea2;
-        }
-        .container{
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            grid-template-rows: 0.1fr 0.1fr 0.3fr 0.3fr 0.1fr;
-            grid-template-areas: 
-                "navbar navbar navbar"
-                "main main main"
-                "clothing1 clothing2 clothing3"
-                "clothing4 clothing5 clothing6"
-                "footer footer footer"
-            ;
+        body {
+            font-family: sans-serif; # Nastavení písma
         }
 
-
-        main{
-            text-align: center;
-            grid-area: main;
+        nav {
+            width: 100%; # Navigační lišta přes celou šířku
+            display: flex; # Flexbox rozložení
+            align-items: center; # Zarovnání na střed vertikálně
+            justify-content: space-between; # Položky od sebe
+            background-color: lightgray; # Barva pozadí
         }
 
-
-        .clothing-column1{
-            grid-area: clothing1;
-        }
-        .clothing-column2{
-            grid-area: clothing2;
-        }
-        .clothing-column3{
-            grid-area: clothing3;
-        }
-        .clothing-column4{
-            grid-area: clothing4;
-        }
-        .clothing-column5{
-            grid-area: clothing5;
-        }
-        .clothing-column6{
-            grid-area: clothing6;
-        }
-        .clothing-column7{
-            grid-area: clothing7;
-        }
-        .clothing-column8{
-            grid-area: clothing8;
-        }
-        .clothing-column9{
-            grid-area: clothing9;
-        }
-        .clothing-column10{
-            grid-area: clothing10;
-        }
-        .clothing-column11{
-            grid-area: clothing11;
-        }
-        .clothing-column12{
-            grid-area: clothing12;
-        }
-        .clothing-column13{
-            grid-area: clothing13;
-        }
-        .clothing-column14{
-            grid-area: clothing14;
-        }
-        .clothing-column15{
-            grid-area: clothing15;
-        }
-        .clothing-column16{
-            grid-area: clothing16;
-        }
-        .clothing-column17{
-            grid-area: clothing17;
-            height: fit-content;
-        }
-        .clothing-column18{
-            grid-area: clothing18;
-        }
-        #menu-img{
-            width: 20px;
-            margin-right: 20px;
-            display: none;
+        .navbar {
+            grid-area: navbar; # Umístění v CSS gridu
         }
 
-        .clothing-column1, 
-        .clothing-column2, 
-        .clothing-column3, 
+        .logo-nav {
+            width: 50px; # Šířka loga
+            margin-left: 30px; # Odsazení zleva
+        }
+
+        nav ul li {
+            list-style: none; # Bez odrážek
+            display: inline-block; # Vedle sebe
+            margin-right: 30px; # Odsazení mezi položkami
+        }
+
+        nav ul li a {
+            text-decoration: none; # Bez podtržení
+            color: #000; # Černý text
+            font-size: 14px; # Velikost písma
+        }
+
+        nav ul li a:hover {
+            color: #ff5ea2; # Barva při najetí
+        }
+
+        .container {
+            display: grid; # Použití CSS gridu
+            grid-template-columns: repeat(6, 1fr); # 6 sloupců
+            grid-template-rows: 0.1fr 0.1fr 0.3fr 0.3fr 0.1fr; # Výška řádků
+            grid-template-areas:
+                "navbar navbar navbar navbar navbar navbar"
+                "main main main main main main"
+                "clothing1 clothing2 clothing3 clothing4 clothing5 clothing6"
+                "clothing7 clothing8 clothing9 clothing10 clothing11 clothing12"
+                "footer footer footer footer footer footer"; # Rozvržení oblastí
+        }
+
+        main {
+            text-align: center; # Zarovnání textu
+            grid-area: main; # Oblast gridu
+        }
+
+        .clothing-column1 { grid-area: clothing1; }
+        .clothing-column2 { grid-area: clothing2; }
+        .clothing-column3 { grid-area: clothing3; }
+        .clothing-column4 { grid-area: clothing4; }
+        .clothing-column5 { grid-area: clothing5; }
+        .clothing-column6 { grid-area: clothing6; }
+        .clothing-column7 { grid-area: clothing7; }
+        .clothing-column8 { grid-area: clothing8; }
+        .clothing-column9 { grid-area: clothing9; }
+        .clothing-column10 { grid-area: clothing10; }
+        .clothing-column11 { grid-area: clothing11; }
+        .clothing-column12 { grid-area: clothing12; }
+
+        #menu-img {
+            width: 20px; # Velikost menu ikony
+            margin-right: 20px; # Odsazení zprava
+            display: none; # Skryté na desktopu
+        }
+
+        .clothing-column1,
+        .clothing-column2,
+        .clothing-column3,
         .clothing-column4,
-        .clothing-column5, 
+        .clothing-column5,
         .clothing-column6,
         .clothing-column7,
         .clothing-column8,
         .clothing-column9,
         .clothing-column10,
         .clothing-column11,
-        .clothing-column12,
-        .clothing-column13,
-        .clothing-column14,
-        .clothing-column15,
-        .clothing-column16,
-        .clothing-column17,
-        .clothing-column18{
-            -webkit-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            box-sizing: border-box;
-            margin: 0 auto;
-            background-color: lightgray;
-            padding: 5px;
-            width: fit-content;
-            box-shadow: 0px 0px 10px gray;
-            transition: 0.15s;
-            cursor: pointer;
-            margin-bottom: 10%;
+        .clothing-column12 {
+            user-select: none; # Nelze označit
+            box-sizing: border-box; # Padding se započítá do velikosti
+            margin: 0 auto; # Vycentrování
+            background-color: lightgray; # Barva pozadí
+            padding: 5px; # Vnitřní okraj
+            width: fit-content; # Šířka podle obsahu
+            box-shadow: 0px 0px 10px gray; # Stín
+            transition: 0.15s; # Plynulý přechod
+            cursor: pointer; # Ruka místo kurzoru
+            margin-bottom: 10%; # Spodní mezera
         }
 
-        .clothing-column1:hover, 
-        .clothing-column2:hover, 
-        .clothing-column3:hover, 
+        .clothing-column1:hover,
+        .clothing-column2:hover,
+        .clothing-column3:hover,
         .clothing-column4:hover,
-        .clothing-column5:hover, 
+        .clothing-column5:hover,
         .clothing-column6:hover,
         .clothing-column7:hover,
         .clothing-column8:hover,
         .clothing-column9:hover,
         .clothing-column10:hover,
         .clothing-column11:hover,
-        .clothing-column12:hover,
-        .clothing-column13:hover,
-        .clothing-column14:hover,
-        .clothing-column15:hover,
-        .clothing-column16:hover,
-        .clothing-column17:hover,
-        .clothing-column18:hover{
-            padding: 7px 7px 0 7px;
-            margin-bottom: 5%;
+        .clothing-column12:hover {
+            padding: 7px 7px 0 7px; # Zvýšený horní padding
+            margin-bottom: 5%; # Menší mezera dole
         }
 
-        
-        @media only screen and (max-width:500000px){
-            .container{
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr;
-                grid-template-rows: 0.1fr 0.1fr 0.3fr 0.3fr 0.1fr;
-                grid-template-areas: 
-                    "navbar navbar navbar navbar"
-                    "main main main main"
-                    "clothing1 clothing2 clothing3 clothing4"
-                    "clothing5 clothing6 clothing7 clothing8"
-                    "clothing9 clothing10 clothing11 clothing12"
-                    " clothing13 clothing14 clothing15 clothing16"
-                    " clothing17 clothing18 clothing18 clothing18"
-                    "footer footer footer footer"
-                ;
+        @media only screen and (max-width: 992px) {
+            .container {
+                grid-template-columns: 1fr 1fr 1fr; # 3 sloupce na tabletu
             }
         }
-        @media only screen and (max-width:992px){
-            .container{
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                grid-template-rows: 0.1fr 0.1fr 0.3fr 0.3fr 0.1fr;
-                grid-template-areas: 
-                    "navbar navbar navbar"
-                    "main main main"
-                    "clothing1 clothing2 clothing3"
-                    "clothing4 clothing5 clothing6"
-                    "clothing7 clothing8 clothing9"
-                    "clothing10 clothing11 clothing12"
-                    "clothing13 clothing14 clothing15"
-                    "clothing16 clothing17 clothing18"
-                    "footer footer footer"
-                ;
-            }
-        }
-        @media only screen and (max-width:768px){
-            .container{
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: 0.1fr 0.1fr 0.3fr 0.3fr 0.1fr;
-                grid-template-areas: 
-                    "navbar navbar"
-                    "main main"
-                    "clothing1 clothing2"
-                    "clothing3 clothing4"
-                    "clothing5 clothing6"
-                    "clothing7 clothing8"
-                    "clothing9 clothing10"
-                    "clothing11 clothing12"
-                    "clothing13 clothing14"
-                    "clothing15 clothing16"
-                    "clothing17 clothing18"
-                    "footer footer"
-                ;
-            }
-        }
-        @media only screen and (max-width:600px){
-            .container{
-                display: grid;
-                grid-template-columns: 1fr;
-                grid-template-rows: 0.1fr 0.1fr 0.3fr 0.3fr 0.1fr;
-                grid-template-areas: 
-                    "navbar"
-                    "main"
-                    "clothing1"
-                    "clothing2"
-                    "clothing3"
-                    "clothing4"
-                    "clothing5"
-                    "clothing6"
-                    "clothing7"
-                    "clothing8"
-                    "clothing9"
-                    "clothing10"
-                    "clothing11"
-                    "clothing12"
-                    "clothing13"
-                    "clothing14"
-                    "clothing15"
-                    "clothing16"
-                    "clothing17"
-                    "clothing18"
-                    "footer"
-                ;
-            }
-        }
-        
-        
-        @media only screen and (max-width:450px){
-            #menu-img{
-                display: block;
-                float: left;
-            }
-            #menu-list{
-                display: none;
-            }
-            #ul-list{
-                display: none;
-            }
-        }
-        
 
+        @media only screen and (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr 1fr; # 2 sloupce na menším zařízení
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr; # 1 sloupec na mobilu
+            }
+        }
+
+        @media only screen and (max-width: 450px) {
+            #menu-img {
+                display: block; # Zobrazí se menu ikona
+                float: left; # Umístí se vlevo
+            }
+
+            #menu-list,
+            #ul-list {
+                display: none; # Skryje menu
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="navbar">
-            <nav>
-                <img src="Playstation_Img/logo.png" class="logo-nav">
-                <div id="ul-list">
-                    <ul id="menuList">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">About</a></li>
-                        <li><a href="">Services</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="">Cart</a></li>
-                    </ul>
-                </div>
-                
-                <img src="Playstation_Img/menu.png" id="menu-img">
-                <div class="navbar-btnned">
-                    
-                </div>
-            </nav>
-        </div>
-        <main>
-            <h1>This is a clothing brand</h1><br>
-            <h2>Pick the best style that fits you</h2>
+    <div class="container"> <!-- # Hlavní obal stránky -->
+        <nav class="navbar"> <!-- # Navigační panel -->
+            <img id="menu-img" src="menu-icon.png" alt="menu"> <!-- # Ikona menu pro mobil -->
+            <img class="logo-nav" src="logo.png" alt="logo"> <!-- # Logo vlevo -->
+            <ul id="ul-list">
+                <li><a href="#">Home</a></li> <!-- # Odkazy v menu -->
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <main> <!-- # Hlavní text sekce -->
+            <h1>Welcome to Our Clothing Shop!</h1> <!-- # Titulek -->
+            <p>Explore our latest collection of fashionable clothing.</p> <!-- # Popis -->
         </main>
 
-            <div class="clothing-column1">
-                <img src="t-shirt.jpg" class="tshirt-img">
-                <p class="shirt-text">T-shirt</p>
-                <p clas="price">10$</p>
-            </div>
-            <div class="clothing-column2">
-                <img src="t-shirt.jpg" class="tshirt-img">
-                <p class="shirt-text">T-shirt</p>
-                <p clas="price">10$</p>
-            </div>
-            <div class="clothing-column3">
-                <img src="t-shirt.jpg" class="tshirt-img">
-                <p class="shirt-text">T-shirt</p>
-                <p clas="price">10$</p>
-            </div>
-            <div class="clothing-column4">
-                <img src="t-shirt.jpg" class="tshirt-img">
-                <p class="shirt-text">T-shirt</p>
-                <p clas="price">10$</p>
-            </div>
-            <div class="clothing-column5">
-                <img src="t-shirt.jpg" class="tshirt-img">
-                <p class="shirt-text">T-shirt</p>
-                <p clas="price">10$</p>
-            </div>
-            <div class="clothing-column6">
-                <img src="t-shirt.jpg" class="tshirt-img">
-                <p class="shirt-text">T-shirt</p>
-                <p clas="price">10$</p>
-            </div>
-            <div class="clothing-column7">
-                <img src="t-shirt.jpg" class="tshirt-img">
-                <p class="shirt-text">T-shirt</p>
-                <p clas="price">10$</p>
-            </div>
-            <div class="clothing-column8">
-                <img src="t-shirt.jpg" class="tshirt-img">
-                <p class="shirt-text">T-shirt</p>
-                <p clas="price">10$</p>
-            </div>
-            <div class="clothing-column9">
-                <img src="t-shirt.jpg" class="tshirt-img">
-                <p class="shirt-text">T-shirt</p>
-                <p clas="price">10$</p>
-            </div>
-            <div class="clothing-column10">
-                <img src="t-shirt.jpg" class="tshirt-img">
-                <p class="shirt-text">T-shirt</p>
-                <p clas="price">10$</p>
-            </div>
-            <div class="clothing-column11">
-                <img src="t-shirt.jpg" class="tshirt-img">
-                <p class="shirt-text">T-shirt</p>
-                <p clas="price">10$</p>
-            </div>
-            <div class="clothing-column12">
-                <img src="t-shirt.jpg" class="tshirt-img">
-                <p class="shirt-text">T-shirt</p>
-                <p clas="price">10$</p>
-            </div>
-            <div class="clothing-column13">
-                <img src="t-shirt.jpg" class="tshirt-img">
-                <p class="shirt-text">T-shirt</p>
-                <p clas="price">10$</p>
-            </div>
-            <div class="clothing-column14">
-                <img src="t-shirt.jpg" class="tshirt-img">
-                <p class="shirt-text">T-shirt</p>
-                <p clas="price">10$</p>
-            </div>
-            <div class="clothing-column15">
-                <img src="t-shirt.jpg" class="tshirt-img">
-                <p class="shirt-text">T-shirt</p>
-                <p clas="price">10$</p>
-            </div>
-            <div class="clothing-column16">
-                <img src="t-shirt.jpg" class="tshirt-img">
-                <p class="shirt-text">T-shirt</p>
-                <p clas="price">10$</p>
-            </div>
-            <!-- <div class="clothing-column17">
-                <img src="t-shirt.jpg" class="tshirt-img">
-                <p class="shirt-text">T-shirt</p>
-                <p clas="price">10$</p>
-            </div>
-            <div class="clothing-column18">
-                <img src="t-shirt.jpg" class="tshirt-img">
-                <p class="shirt-text">T-shirt</p>
-                <p clas="price">10$</p>
-            </div> -->
+        <!-- # Produkty (každý má vlastní třídu a grid area) -->
+        <div class="clothing-column1"><img src="shirt1.jpg" alt="Shirt 1" width="100"><p>Shirt 1</p></div>
+        <div class="clothing-column2"><img src="shirt2.jpg" alt="Shirt 2" width="100"><p>Shirt 2</p></div>
+        <div class="clothing-column3"><img src="pants1.jpg" alt="Pants 1" width="100"><p>Pants 1</p></div>
+        <div class="clothing-column4"><img src="pants2.jpg" alt="Pants 2" width="100"><p>Pants 2</p></div>
+        <div class="clothing-column5"><img src="hat1.jpg" alt="Hat 1" width="100"><p>Hat 1</p></div>
+        <div class="clothing-column6"><img src="hat2.jpg" alt="Hat 2" width="100"><p>Hat 2</p></div>
+        <div class="clothing-column7"><img src="jacket1.jpg" alt="Jacket 1" width="100"><p>Jacket 1</p></div>
+        <div class="clothing-column8"><img src="jacket2.jpg" alt="Jacket 2" width="100"><p>Jacket 2</p></div>
+        <div class="clothing-column9"><img src="shoes1.jpg" alt="Shoes 1" width="100"><p>Shoes 1</p></div>
+        <div class="clothing-column10"><img src="shoes2.jpg" alt="Shoes 2" width="100"><p>Shoes 2</p></div>
+        <div class="clothing-column11"><img src="bag1.jpg" alt="Bag 1" width="100"><p>Bag 1</p></div>
+        <div class="clothing-column12"><img src="bag2.jpg" alt="Bag 2" width="100"><p>Bag 2</p></div>
+
+        <footer style="grid-area: footer; text-align: center; padding: 20px;"> <!-- # Patička stránky -->
+            &copy; 2025 Clothing Shop. All rights reserved. <!-- # Copyright -->
+        </footer>
     </div>
-
-    <script>
-
-
-
-    </script>
-
 </body>
 </html>
