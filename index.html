@@ -8,57 +8,57 @@
 
     <style>
         body {
-            font-family: sans-serif; # Nastavení písma
+            font-family: sans-serif; /* Nastavení písma */
         }
 
         nav {
-            width: 100%; # Navigační lišta přes celou šířku
-            display: flex; # Flexbox rozložení
-            align-items: center; # Zarovnání na střed vertikálně
-            justify-content: space-between; # Položky od sebe
-            background-color: lightgray; # Barva pozadí
+            width: 100%; /* Navigační lišta přes celou šířku */
+            display: flex; /* Flexbox rozložení */
+            align-items: center; /* Zarovnání na střed vertikálně */
+            justify-content: space-between; /* Položky od sebe */
+            background-color: lightgray; /* Barva pozadí */
         }
 
         .navbar {
-            grid-area: navbar; # Umístění v CSS gridu
+            grid-area: navbar; /* Umístění v CSS gridu */
         }
 
         .logo-nav {
-            width: 50px; # Šířka loga
-            margin-left: 30px; # Odsazení zleva
+            width: 50px; /* Šířka loga */
+            margin-left: 30px; /* Odsazení zleva */
         }
 
         nav ul li {
-            list-style: none; # Bez odrážek
-            display: inline-block; # Vedle sebe
-            margin-right: 30px; # Odsazení mezi položkami
+            list-style: none; /* Bez odrážek */
+            display: inline-block; /* Vedle sebe */
+            margin-right: 30px; /* Odsazení mezi položkami */
         }
 
         nav ul li a {
-            text-decoration: none; # Bez podtržení
-            color: #000; # Černý text
-            font-size: 14px; # Velikost písma
+            text-decoration: none; /* Bez podtržení */
+            color: #000; /* Černý text */
+            font-size: 14px; /* Velikost písma */
         }
 
         nav ul li a:hover {
-            color: #ff5ea2; # Barva při najetí
+            color: #ff5ea2; /* Barva při najetí */
         }
 
         .container {
-            display: grid; # Použití CSS gridu
-            grid-template-columns: repeat(6, 1fr); # 6 sloupců
-            grid-template-rows: 0.1fr 0.1fr 0.3fr 0.3fr 0.1fr; # Výška řádků
+            display: grid; /* Použití CSS gridu */
+            grid-template-columns: repeat(6, 1fr); /* 6 sloupců */
+            grid-template-rows: 0.1fr 0.1fr 0.3fr 0.3fr 0.1fr; /* Výška řádků */
             grid-template-areas:
                 "navbar navbar navbar navbar navbar navbar"
                 "main main main main main main"
                 "clothing1 clothing2 clothing3 clothing4 clothing5 clothing6"
                 "clothing7 clothing8 clothing9 clothing10 clothing11 clothing12"
-                "footer footer footer footer footer footer"; # Rozvržení oblastí
+                "footer footer footer footer footer footer"; /* Rozvržení oblastí */
         }
 
         main {
-            text-align: center; # Zarovnání textu
-            grid-area: main; # Oblast gridu
+            text-align: center; /* Zarovnání textu */
+            grid-area: main; /* Oblast gridu */
         }
 
         .clothing-column1 { grid-area: clothing1; }
@@ -75,9 +75,9 @@
         .clothing-column12 { grid-area: clothing12; }
 
         #menu-img {
-            width: 20px; # Velikost menu ikony
-            margin-right: 20px; # Odsazení zprava
-            display: none; # Skryté na desktopu
+            width: 20px; /* Velikost menu ikony */
+            margin-right: 20px; /* Odsazení zprava */
+            display: none; /* Skryté na desktopu */
         }
 
         .clothing-column1,
@@ -92,16 +92,16 @@
         .clothing-column10,
         .clothing-column11,
         .clothing-column12 {
-            user-select: none; # Nelze označit
-            box-sizing: border-box; # Padding se započítá do velikosti
-            margin: 0 auto; # Vycentrování
-            background-color: lightgray; # Barva pozadí
-            padding: 5px; # Vnitřní okraj
-            width: fit-content; # Šířka podle obsahu
-            box-shadow: 0px 0px 10px gray; # Stín
-            transition: 0.15s; # Plynulý přechod
-            cursor: pointer; # Ruka místo kurzoru
-            margin-bottom: 10%; # Spodní mezera
+            user-select: none; /* Nelze označit */
+            box-sizing: border-box; /* Padding se započítá do velikosti */
+            margin: 0 auto; /* Vycentrování */
+            background-color: lightgray; /* Barva pozadí */
+            padding: 5px; /* Vnitřní okraj */
+            width: fit-content; /* Šířka podle obsahu */
+            box-shadow: 0px 0px 10px gray; /* Stín */
+            transition: 0.15s; /* Plynulý přechod */
+            cursor: pointer; /* Ruka místo kurzoru */
+            margin-bottom: 10%; /* Spodní mezera */
         }
 
         .clothing-column1:hover,
@@ -116,37 +116,37 @@
         .clothing-column10:hover,
         .clothing-column11:hover,
         .clothing-column12:hover {
-            padding: 7px 7px 0 7px; # Zvýšený horní padding
-            margin-bottom: 5%; # Menší mezera dole
+            padding: 7px 7px 0 7px; /* Zvýšený horní padding */
+            margin-bottom: 5%; /* Menší mezera dole */
         }
 
         @media only screen and (max-width: 992px) {
             .container {
-                grid-template-columns: 1fr 1fr 1fr; # 3 sloupce na tabletu
+                grid-template-columns: 1fr 1fr 1fr; /* 3 sloupce na tabletu */
             }
         }
 
         @media only screen and (max-width: 768px) {
             .container {
-                grid-template-columns: 1fr 1fr; # 2 sloupce na menším zařízení
+                grid-template-columns: 1fr 1fr; /* 2 sloupce na menším zařízení */
             }
         }
 
         @media only screen and (max-width: 600px) {
             .container {
-                grid-template-columns: 1fr; # 1 sloupec na mobilu
+                grid-template-columns: 1fr; /* 1 sloupec na mobilu */
             }
         }
 
         @media only screen and (max-width: 450px) {
             #menu-img {
-                display: block; # Zobrazí se menu ikona
-                float: left; # Umístí se vlevo
+                display: block; /* Zobrazí se menu ikona */
+                float: left; /* Umístí se vlevo */
             }
 
             #menu-list,
             #ul-list {
-                display: none; # Skryje menu
+                display: none; /* Skryje menu */
             }
         }
     </style>
