@@ -6,6 +6,8 @@ Na vrchu stránky je navigační lišta s logem a odkazy jako Home, About, Servi
 Stylování jsem si pohrál přes @media queries, takže při různých šířkách obrazovky se obsah automaticky přeuspořádá. Například na mobilu se zobrazují produkty jeden pod druhým, na tabletu dva vedle sebe a na desktopu třeba čtyři vedle sebe. Díky tomu je stránka přehledná a použitelná i na telefonech.
 Design jsem ladil pomocí box-shadow, zarovnání a paddingu, aby každý produkt vypadal jako malá karta, která po najetí myší trochu reaguje – posune se nebo změní okraj. Je to jednoduché, ale funkční.
 HTML struktura je jasná – mám kontejner .container, který obsahuje navigaci, hlavní text (<main>) a všechny produkty jako jednotlivé divy. Do JavaScriptu se zatím nepouštím, ale v budoucnu tam chci přidat např. filtrování podle kategorií nebo funkční košík.
+
+
 link:https://youtu.be/YkCr7yPfAwg
 
 
